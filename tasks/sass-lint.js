@@ -1,0 +1,1 @@
+console.log('sass-lint.js is being run');

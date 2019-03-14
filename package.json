@@ -1,0 +1,23 @@
+{
+  "name": "using-npm-scripts-to-run-node-sass",
+  "version": "1.0.0",
+  "description": "whatevs",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "devDependencies": {
+    "postcss": "^7.0.14",
+    "sass-lint": "^1.12.1"
+  },
+  "scripts": {
+    "presass": "rimraf html/css",
+    "sass": "node-sass index.scss index.css --output-style=compressed",
+    "watch:sass": "watch \"npm run sass\" scss --interval=0.1",
+    "sassed": "node ./tasks/sass.js",
+    "sass-linted": "node ./tasks/sass-lint.js",
+    "postcssed": "node ./tasks/postcss.js"
+  },
+  "author": "me",
+  "license": "ISC"
+}
