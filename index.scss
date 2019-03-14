@@ -1,4 +1,31 @@
-$background: gray;
-body {
-  background-color: $background;
-}
+// browser resets
+@import "scss/01-normalize";
+
+// layout, i.e. structure (l): 
+    // display (.ld-), float (.lf-), flexbox (.lfp-, .lfc-), overflow, position, sides(top,right,bottom,left)
+@import "scss/02-layout";
+
+// component-container (.cc-): w h minw minh maxw maxh margin margin-trbl padding padding-trbl
+@import "scss/03-elementsize-margins-padding";
+
+// component-decoration (.cd-):
+// border-radius, box-shadow,
+// ??? filters, blur, etc?
+@import "scss/04-elementborders";
+
+// typography (.cst-)
+@import "scss/05-typography";
+
+// effects (visibility, opacity, box-shadow, etc.)
+@import "scss/06-effects";
+
+// colors (.c-bg1..-bg18. c-bc1..-18, .c-c1..-18)
+@import "scss/07-colors";
+@import "scss/08-grids";
+
+// .u-mt, r, b, l, from -100 to 100, eg. .u-mt-20, or .u-pt50
+@import "scss/09-utility";
+
+// @todo
+@import "scss/10-patterns"; 
+  

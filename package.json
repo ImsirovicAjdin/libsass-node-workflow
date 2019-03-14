@@ -12,7 +12,8 @@
   },
   "scripts": {
     "presass": "rimraf html/css",
-    "sass": "node-sass index.scss index.css --output-style=compressed",
+    "sass-singlefile": "node-sass index.scss index.css --output-style=compressed",
+    "sass-splitfiles": "node-sass ./scss/01-normalize.scss ./css/01-normalize.css --output-style=compact && node-sass ./scss/02-layout.scss ./css/02-layout.css --output-style=compact && node-sass ./scss/03-elementsize-margins-paddings.scss ./css/03-elementsize-margins-paddings.css --output-style=compact && node-sass ./scss/04-elementborders.scss ./css/04-elementborders.css --output-style=compact",
     "watch:sass": "watch \"npm run sass\" scss --interval=0.1",
     "sassed": "node ./tasks/sass.js",
     "sass-linted": "node ./tasks/sass-lint.js",
